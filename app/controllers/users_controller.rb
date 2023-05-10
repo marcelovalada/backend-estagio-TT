@@ -42,59 +42,7 @@ class UsersController < ApplicationController
 
   private
 
-  # def set_user
-  #   @user = Teste.find(params[:id])
-  # end
-
   def user_params
-    params.permit(:name, :password_digest, :cpf)
+    params.require(:user).permit(:name, :password_digest, :cpf, :email)
   end
 end
-
-# # GET /testes
-# def index
-#   @testes = Teste.all
-
-#   render json: @testes
-# end
-
-# # GET /testes/1
-# def show
-#   render json: @user
-# end
-
-# # POST /testes
-# def create
-#   @user = Teste.new(user_params)
-
-#   if @user.save
-#     render json: @user, status: :created, location: @user
-#   else
-#     render json: @user.errors, status: :unprocessable_entity
-#   end
-# end
-
-# # PATCH/PUT /testes/1
-# def update
-#   if @user.update(user_params)
-#     render json: @user
-#   else
-#     render json: @user.errors, status: :unprocessable_entity
-#   end
-# end
-
-# # DELETE /testes/1
-# def destroy
-#   @user.destroy
-# end
-
-# private
-#   # Use callbacks to share common setup or constraints between actions.
-#   def set_user
-#     @user = Teste.find(params[:id])
-#   end
-
-#   # Only allow a list of trusted parameters through.
-#   def user_params
-#     params.fetch(:user, {})
-#   end
