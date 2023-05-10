@@ -1,24 +1,23 @@
-# README
+# PROJETO ESTÁGIO - BACK-END-API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Sobre
+#### Essa API simula o fluxo de um sistema de coleta em campo.
 
-Things you may want to cover:
+## Pré-requisitos
+#### - Ruby
+#### - Rails
+#### - Bundler
+#### - SQLite
 
-* Ruby version
+## Instalação
+#### Rodar o "bundler install" para instalar as gems necessárias.
+#### "rails db:create" para criar as entidades no banco de dados.
+#### "rails db:migrate" para fazer as alterações do banco de dados.
+#### "rails server" para rodar o servidor local.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Funcionalidades
+#### - Exitem as seguinte entidades: Usuário, Visita, Formulários, Perguntas e Respostas.
+#### - O usuário precisa está logado para desempenhar seu papel.
+#### - O usuário consegue ver quais visitas existem para ele
+#### - A visita é uma tarefa com data agendada direcionada para um usuário.
+#### - O formulário é um conjunto de perguntas específicas.
