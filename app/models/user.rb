@@ -1,7 +1,8 @@
 class User < ApplicationRecord
-  has_many :visits
   #método do bcrypt para garantir que a senha esteja criptografada
-  #has_secure_password
+  has_secure_password
+
+  has_many :visits
 
   # Validações de presença
   validates :name, :email, :cpf, presence: true
