@@ -2,7 +2,10 @@ class Question < ApplicationRecord
   has_one_attached :image
 
   belongs_to :formulary
+  has_many :answers
 
-  validates :name, uniqueness: { message: 'já está em uso' }
+  enum question_type: [:text, :photo]
+
+  validates :name, uniqueness: { message: 'Nome já está em uso' }
 
 end

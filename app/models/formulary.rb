@@ -1,3 +1,4 @@
 class Formulary < ApplicationRecord
-  validates :name, uniqueness: { message: 'já está em uso' }
+  has_many :questions
+  validates :name, uniqueness: { message: 'Nome já está em uso' }
 end

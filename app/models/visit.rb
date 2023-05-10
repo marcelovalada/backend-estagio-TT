@@ -1,6 +1,8 @@
 class Visit < ApplicationRecord
   belongs_to :user
 
+  has_many :answer
+
   validates :user_id, presence: true
   validates :status, inclusion: { in: %w(pendente realizando realizada), message: 'Só será aceito pendente, realizando ou realizada' }
 
