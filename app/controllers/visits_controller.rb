@@ -1,4 +1,6 @@
 class VisitsController < ApplicationController
+  before_action :set_visit, only: [:show, :update, :destroy]
+
   # GET /visits
   def index
     @visits = Visit.order(created_at: :desc)
@@ -7,7 +9,6 @@ class VisitsController < ApplicationController
 
   # GET /visits/1
   def show
-    @visit = Visit.find(params[:id])
     render json: @visit
   end
 
@@ -24,8 +25,6 @@ class VisitsController < ApplicationController
 
   # PATCH /visits/1
   def update
-    @visit = Visit.find(params[:id])
-
     if @visit.update(visit_params)
       render json: @visit
     else
@@ -35,12 +34,14 @@ class VisitsController < ApplicationController
 
   # DELETE /visits/1
   def destroy
-    @visit = Visit.find(params[:id])
-
     @visit.destroy
   end
 
   private
+
+  def set_visit
+    @visit = Visit.find(params[:id])
+  end
 
   def visit_params
     params.require(:visit).permit(:data, :status, :user_id, :checkin_at, :checkout_at)
