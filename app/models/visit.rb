@@ -4,9 +4,9 @@ class Visit < ApplicationRecord
   validates :user_id, presence: true
   validates :status, inclusion: { in: %w(pendente realizando realizada), message: 'Só será aceito pendente, realizando ou realizada' }
 
-  validate :before_today?, on: :create
-  validate :checkin_before_checkout?, on: :create
-  validate :checkin_after_created_at?, on: :create
+  validate :before_today?#, on: :create
+  validate :checkin_before_checkout?#, on: :create
+  validate :checkin_after_created_at?#, on: :create
 
   private
 

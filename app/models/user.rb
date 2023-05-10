@@ -13,8 +13,8 @@ class User < ApplicationRecord
   validates :cpf, format: { with: /\A\d{3}\.\d{3}\.\d{3}-\d{2}\z/, message: 'deve estar no formato 999.999.999-99' }
 
   # Validação de CPF único
-  validates :cpf, uniqueness: { message: 'já está em uso' }, on: :create
+  validates :cpf, uniqueness: { message: 'já está em uso' }
 
   # Validação de e-mail único
-  validates :email, uniqueness: { message: 'já está em uso' }, on: :create
+  validates :email, uniqueness: { message: 'já está em uso' }
 end
