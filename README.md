@@ -16,8 +16,8 @@
 #### "rails server" para rodar o servidor local.
 
 ## Funcionalidades
-#### - Exitem as seguinte entidades: Usuário, Visita, Formulários, Perguntas e Respostas.
-#### - O usuário precisa está logado para desempenhar seu papel.
-#### - O usuário consegue ver quais visitas existem para ele
+#### - Exitem as seguintes entidades: Usuário, Visita, Formulários, Perguntas e Respostas.
+#### - O usuário precisa estar logado para desempenhar seu papel.
+#### - O usuário consegue ver quais visitas existem para ele.
 #### - A visita é uma tarefa com data agendada direcionada para um usuário.
 #### - O formulário é um conjunto de perguntas específicas.
